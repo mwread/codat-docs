@@ -206,23 +206,3 @@ var info = response.Data;",
 }
 ```
 
-
-### For companies with no data connection established
-`` GET /companies?page=1&pageSize=100&query=dataConnections.count=0``
-
-*Note*: The page size value is obligatory for querying.
-
-```
-
-var request = new RestRequest("companies", Method.GET);
-request.AddUrlSegment("page", 1);
-request.AddUrlSegment("query", "dataConnections.count=0");
-request.AddHeader("Authorization", $"Basic {encodedApiKey}");
-var response = client.Execute(request);
-var info = response.Data;",
-"language": "javascript",
-"name": "C#"
-}
-]
-}
-```
